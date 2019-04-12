@@ -1,4 +1,5 @@
 #!/bin/bash
+rm -f ~/Fiisoft/alphaabx.github.io/_posts/*
 for filepath in ~/Fiisoft/alpha-team-standup/standup/*.md; do
 	filename=$(basename $filepath)
     yyyy=${filename:0:4}
@@ -13,7 +14,7 @@ for filepath in ~/Fiisoft/alpha-team-standup/standup/*.md; do
         new_filename=$yyyy-$mm-$dd-[NEW]----$user
     fi
     
-    new_filepath=~/Fiisoft/my-alpha/_posts/$new_filename
+    new_filepath=~/Fiisoft/alphaabx.github.io/_posts/$new_filename
     cp $filepath $new_filepath
     header="---\n"
     header+='layout:\tpost\n'
